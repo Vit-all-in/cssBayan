@@ -3,6 +3,7 @@ body {
    background-color: antiquewhite;
    color: blue;
    margin: 0 1rem;
+   font-size: 1rem;
 }
 
 img {
@@ -43,13 +44,13 @@ h1 {
 }
 
 .title {
-   font-size: 1rem;
    transition: 0.5s ease;
 }
 
 .plus {
    opacity: 0;
    transition: 0.5s ease;
+   color: black;
 }
 
 .container__wrapper:hover .title {
@@ -82,4 +83,11 @@ input:checked~ .info .title {
 
 input:checked~ .info .plus{
    transform: rotate(45deg);
+}
+
+@media (min-width: 820px) { 
+   body {
+      margin: 0 3rem;
+      font-size: 1.5rem;
+   }
 }
