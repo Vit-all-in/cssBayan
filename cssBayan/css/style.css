@@ -1,0 +1,113 @@
+body {
+   box-sizing: border-box;
+   background-color: antiquewhite;
+   color: blue;
+   margin: 0 1rem;
+   font-size: 1rem;
+   font-family: 'Nanum Brush Script', cursive;
+}
+
+img {
+   width: 50%;
+   margin: 0 auto;
+   max-height: 0;
+   padding: 0.4rem;
+   transition: all 1.4s ease-in-out;
+}
+
+h1 {
+   color: rgb(0, 0, 0);
+   text-align: center;
+}
+
+.container__wrapper {
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   transition: 0.5s ease;
+}
+
+.mem {
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0.1rem 0.3rem 1.5rem #c6bfcb;
+   transition: 0.5s ease;
+}
+
+.info {
+   padding: 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: all 0.4s ease-in-out;
+}
+
+.title {
+   transition: 0.5s ease;
+}
+
+.plus {
+   opacity: 0;
+   transition: 0.5s ease;
+   color: black;
+}
+
+.container__wrapper:hover .title {
+   color: black;
+   transition: 0.5s ease;
+}
+
+.container__wrapper:hover .plus {
+   opacity: 1;
+   transition: 0.5s ease;
+}
+
+.mem:hover img{
+   max-height: 24rem;
+   transition: all 0.5s ease-in;
+}
+
+.mem:hover .plus{
+   transform: rotate(45deg);
+   transition: 0.3s ease;
+}
+
+input:checked~img{
+   max-height: 24rem;
+}
+
+input:checked~ .info .title {
+   color: black;
+}
+
+input:checked~ .info .plus{
+   transform: rotate(45deg);
+}
+
+@media (min-width: 820px) { 
+   body {
+      margin: 0 3rem;
+      font-size: 1.5rem;
+   }
+}
+
+@media (min-width: 1080px) { 
+   body {
+      margin: 0 5rem;
+      font-size: 1.7rem;
+   }
+
+   .mem {
+      box-shadow: 0.3rem 0.5rem 1.7rem #c6bfcb;
+      cursor: pointer;
+   }
+
+   .mem:hover img{
+      max-height: 42rem;
+      padding: 1rem;
+      transition: all 0.5s ease-in;
+   }
+   input:checked~img{
+      max-height: 42rem;
+   }
+}
