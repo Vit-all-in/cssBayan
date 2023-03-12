@@ -20,7 +20,6 @@ h1 {
 }
 
 .container__wrapper {
-   max-height: 20rem;
    margin: 0 auto;
    display: flex;
    flex-direction: column;
@@ -31,7 +30,6 @@ h1 {
    display: flex;
    flex-direction: column;
    box-shadow: 0.1rem 0.3rem 1.5rem #c6bfcb;
-   transition: 0.5s ease;
    transition: 0.5s ease;
 }
 
@@ -89,5 +87,26 @@ input:checked~ .info .plus{
    body {
       margin: 0 3rem;
       font-size: 1.5rem;
+   }
+}
+
+@media (min-width: 1080px) { 
+   body {
+      margin: 0 5rem;
+      font-size: 1.7rem;
+   }
+
+   .mem {
+      box-shadow: 0.3rem 0.5rem 1.7rem #c6bfcb;
+      cursor: pointer;
+   }
+
+   .mem:hover img{
+      max-height: 42rem;
+      padding: 1rem;
+      transition: all 0.5s ease-in;
+   }
+   input:checked~img{
+      max-height: 42rem;
    }
 }
